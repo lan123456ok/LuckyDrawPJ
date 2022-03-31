@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style type="text/css">
+        #loginBox {
+            margin: 20% auto;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="index.php" method="POST" id="loginBox">
+        <h2 style="text-align:center">Login</h2>
+        <input type="text" name="user" placeholder="Email" autocapitalize="off" /><br />
+        <input type="password" name="pass" placeholder="Password" /><br />
+
+        <input type="submit" value="Log In" name="login" />
+        <br />
+        <span class="psw"><a href="@Url.Action("Index","ForgotPassword")">Forgot password ?</a></span>
+
+    </form>
+    <div class="content">
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
